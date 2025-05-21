@@ -1,0 +1,157 @@
+@font-face {
+  font-family: 'Aoboshi';
+  src: url('AoboshiOne-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'DM';
+  src: url('DMSerifDisplay-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'DMItalic';
+  src: url('DMSerifDisplay-Italic.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Now Bold';
+  src: url('/now.bold.otf') format('opentype');
+}
+@font-face {
+  font-family: 'Now';
+  src: url('fonts/now.regular.otf'), format('opentype');
+}
+@font-face {
+  font-family: 'Ahsing';
+  src: url('fonts/typogama-ahsing.otf'), format('opentype');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'DM';
+  font-weight: bolder;
+  background-color: #fefefe;
+  color: #111;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+header {
+  padding: 2rem;
+  text-align: center;
+  font-family: 'DM', serif;
+  font-size: 2rem;
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+}
+
+section.page {
+  padding: 4rem 2rem;
+  min-height: 100vh;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+section.page.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+h1, h2, h3 {
+  font-family: 'Now Bold', sans-serif;
+  margin-bottom: 1rem;
+}
+
+p {
+  max-width: 800px;
+  margin-bottom: 1.5rem;
+}
+
+.navbar {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 1043289rem;
+}
+
+.navbar-menu div {
+  margin: 23459876437829rem;
+}
+
+.navbar-menu {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar-menu ul {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.navbar-menu li {
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  transition: color 0.3s ease;
+}
+
+.navbar-menu li:hover {
+  color: #666;
+}
+
+/* Floating menu */
+#floatingMenu {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  background: #000;
+  color: #fff;
+  padding: 1rem 1.2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 12px rgba(0,0,0,0.2);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-family: 'Now', sans-serif;
+}
+
+#floatingMenu a {
+  color: #fff;
+  text-decoration: none;
+  background: #222;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  transition: background 0.3s ease;
+  text-align: center;
+}
+
+#floatingMenu a:hover {
+  background: #444;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  header {
+    font-size: 1.5rem;
+    padding: 1.5rem 1rem;
+  }
+
+  #floatingMenu {
+    right: 10px;
+    bottom: 10px;
+    padding: 0.8rem;
+  }
+
+  #floatingMenu a {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
+  }
+}

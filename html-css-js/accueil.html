@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <link rel='stylesheet' type='text/css' href='style.css'>
+        <script defer src="script.js"></script>
+        <title>Accueil</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Preston MEG - Portfolio</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <nav class="navbar">
+            <div class="navbar-brand">Preston MEG</div></td>
+            <div class="navbar-menu">
+                <ul>
+                    <li onclick="navigate('home')">Accueil</li>
+                    <li onclick="navigate('about')">À propos</li>
+                    <li onclick="navigate('projects')">Projets</li>
+                    <li onclick="navigate('contact')">Contact</li>
+                </ul>
+            </div>
+        </nav>
+        <div id="floatingMenu">
+            <button onclick="window.open('https://calendly.com/placeholder', '_blank')">Prendre RDV</button>
+            <button onclick="window.open('https://www.linkedin.com/in/placeholder', '_blank')">LinkedIn</button>
+            <a href="cv-prestou.pdf" download><button>Télécharger CV</button></a>
+        </div>
+        <main id="app">
+            <section id="home" class="page active">
+                <h1>Bonjour, je suis Preston MEG.</h1>
+                <p>Stratégiste créatif, développeur et designer d'innovation.</p>
+            </section>
+            <section id="about" class="page">
+                <h2>À propos</h2>
+                <p>Voici un petit résumé de qui je suis...</p>
+                <img src="Image 1" alt="Photo de profil de Prestou">
+            </section>
+            <section id="projects" class="page">
+                <h2>Projets</h2>
+                <div class="gallery">
+                    <img src="Image 2" alt="Projet 1">
+                    <img src="Image 3" alt="Projet 2">
+                    <img src="Image 4" alt="Projet 3">
+                </div>
+            </section>
+            <section id="contact" class="page">
+                <h2>Contact</h2>
+                <p>Envie de collaborer ? N'hésite pas à me contacter.</p>
+            </section>
+        </main>
+    </body>
+</html>
