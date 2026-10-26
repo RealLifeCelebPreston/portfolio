@@ -86,9 +86,15 @@
     .dress-copy p{color:#e2d9c9;line-height:1.9;font-size:13px;max-width:340px}
     .swatches{display:flex;gap:9px;margin:28px 0 13px}.swatches span{display:block;width:41px;height:41px;border-radius:50%;border:1px solid #d4c4a8;box-shadow:0 1px 6px #0005}.swatches span:nth-child(1){background:#064936}.swatches span:nth-child(2){background:#dfb56e}.swatches span:nth-child(3){background:#f5eada}.swatches span:nth-child(4){background:#714b35}.swatches span:nth-child(5){background:#0c0c0c}
     .palette-caption{font-size:10px;letter-spacing:.17em;color:#dbb986;text-transform:uppercase;max-width:330px;line-height:1.9}
-    .dress-photo{background:url("https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1100&q=85") center / cover no-repeat,#72664b;min-height:440px;position:relative}
-    .dress-photo:before{content:"";position:absolute;inset:0;background:linear-gradient(270deg,transparent,#0924193d)}
-    .dress-photo .photo-tag{position:absolute;bottom:35px;right:30px;font-family:"Cormorant Garamond",serif;font-size:31px;color:white;text-shadow:0 2px 9px #000b}
+    .dress-photo{min-height:440px;position:relative;isolation:isolate;display:flex;flex-direction:column;justify-content:center;align-items:center;overflow:hidden;background:radial-gradient(circle at 50% 40%,#234c36 0%,#102e21 48%,#071e16 100%);border:1px solid #b98e4b}
+    .dress-photo:before{content:"";position:absolute;inset:22px;border:1px solid #c59a536f;outline:1px solid #c59a533b;outline-offset:-12px;pointer-events:none}
+    .dress-photo:after{content:"";position:absolute;z-index:-1;width:320px;height:320px;border:1px solid #d6aa6370;transform:rotate(45deg);box-shadow:0 0 0 32px #d6aa6310,0 0 0 75px #d6aa6308;pointer-events:none}
+    .dress-photo .portrait-mark{position:relative;z-index:1;text-align:center;display:flex;flex-direction:column;align-items:center;color:var(--gold2)}
+    .dress-photo .portrait-mark .crest{font-size:41px;line-height:1;margin-bottom:15px;color:var(--gold)}
+    .dress-photo .portrait-mark .number{font-family:"Cormorant Garamond",serif;font-size:clamp(155px,19vw,235px);font-weight:500;line-height:.65}
+    .dress-photo .portrait-mark .years{font-size:12px;letter-spacing:.5em;margin-top:24px;text-transform:uppercase}
+    .dress-photo .portrait-mark .motto{font-family:"Great Vibes",cursive;font-size:35px;margin-top:26px}
+    .dress-photo .photo-tag{position:absolute;bottom:35px;left:15px;right:15px;text-align:center;font-family:"Cormorant Garamond",serif;font-size:26px;color:var(--gold2);text-shadow:0 2px 9px #000b}
     .cta{position:relative;text-align:center;padding:120px 0 125px;overflow:hidden;background:radial-gradient(ellipse at 50% 70%,#174231,#071e16 70%)}
     .cta:before,.cta:after{content:"";position:absolute;width:390px;height:500px;opacity:.25;background:url("https://images.unsplash.com/photo-1525498128493-380d1990a112?auto=format&fit=crop&w=680&q=60") center / cover;filter:sepia(.7) hue-rotate(70deg) saturate(.6);mask-image:linear-gradient(to right,#000,transparent)}
     .cta:before{left:-150px;bottom:-160px}.cta:after{right:-160px;top:-200px;transform:rotate(180deg)}
@@ -205,7 +211,7 @@
             <div class="swatches" aria-label="Palette : vert forêt, or champagne, ivoire, brun acajou et noir"><span title="Vert forêt"></span><span title="Or champagne"></span><span title="Ivoire"></span><span title="Brun acajou"></span><span title="Noir"></span></div>
             <div class="palette-caption">Vert forêt • Or champagne • Ivoire<br>Brun acajou • Noir</div>
           </div>
-          <div class="dress-photo" role="img" aria-label="Inspiration pour une réception élégante"><span class="photo-tag">Elegance is a legacy.</span></div>
+          <div class="dress-photo" role="img" aria-label="Emblème or et vert forêt des 50 ans de Simplice"><div class="portrait-mark" aria-hidden="true"><span class="crest">✥</span><span class="number gold">50</span><span class="years">ANS</span><span class="motto">Simplice</span></div><span class="photo-tag" aria-hidden="true">Grace, roots & legacy</span></div>
         </div>
       </div>
     </section>
