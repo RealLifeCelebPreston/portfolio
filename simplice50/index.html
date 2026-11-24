@@ -104,7 +104,7 @@
     .cta small{font-size:11px;color:#d8c9ae}
     footer{border-top:1px solid var(--line);padding:24px 0 30px;background:#051a12}.foot{display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap}.foot .brand{font-size:23px}
     .foot p{font-size:10px;color:#c2b399;letter-spacing:.15em;text-transform:uppercase}.foot a:not(.brand){font-size:11px;color:var(--gold2);text-decoration:underline;text-underline-offset:4px}
-    .float-rsvp{display:none}.fadeup{opacity:0;transform:translateY(19px);transition:opacity .8s ease,transform .8s ease}.fadeup.visible{opacity:1;transform:none}
+    .closed-state{cursor:default!important;pointer-events:none!important;user-select:none}.float-rsvp{display:none!important}.fadeup{opacity:0;transform:translateY(19px);transition:opacity .8s ease,transform .8s ease}.fadeup.visible{opacity:1;transform:none}
     @media(max-width:900px){.navlinks{gap:15px}.navlinks a{font-size:9px}.nav .pill{display:none}.hero-grid{grid-template-columns:1fr}.hero-badge{display:none}.hero:before{left:18%}.hero:after{background:linear-gradient(90deg,#071e16ed,#071e1691 70%),linear-gradient(0deg,#071e16,transparent 35%)}.hero{min-height:700px}.about-grid,.program-layout{gap:25px}.about-grid{grid-template-columns:.83fr 1.17fr}.photo-panel{height:400px}.program-card{padding:33px}.dress-copy{padding:55px 43px}}
     @media(max-width:690px){.wrap{width:min(100% - 36px,500px)}header{height:68px}.brand{font-size:27px}.mobile-toggle{display:block}.navlinks{position:absolute;top:68px;left:0;right:0;background:#071e16f7;display:none;flex-direction:column;align-items:stretch;gap:0;border-bottom:1px solid var(--line);padding:12px 22px 18px}.navlinks.open{display:flex}.navlinks a{padding:15px 9px;font-size:11px}.hero{min-height:715px;padding-top:128px;padding-bottom:65px}.hero:before{inset:0;background-position:60% 50%;opacity:.7}.hero:after{background:linear-gradient(90deg,#071e16ec,#071e169e),linear-gradient(0deg,#071e16,transparent 35%)}.hero h1{font-size:100px;margin-top:33px}.hero .fête{font-size:57px;margin-top:9px;margin-left:15px}.fifty{margin-left:48px;gap:12px}.fifty strong{font-size:178px}.fifty span{font-size:26px}.hero-tagline{font-size:26px;margin-top:19px}.hero .theme{font-size:10px;letter-spacing:.18em}.hero p{font-size:13px;line-height:1.8}.hero-actions .pill{width:100%}.hero-note{width:100%;text-align:center}.details{padding:18px 0;grid-template-columns:1fr;gap:0}.detail{justify-content:flex-start;min-height:72px;padding:9px 16px}.detail + .detail{border-left:0;border-top:1px solid #b28b5a68}.detail .ico{min-width:45px;text-align:center}.section{padding:76px 0}.section-head{margin-bottom:35px}.about-grid,.program-layout,.dress-grid{grid-template-columns:1fr}.photo-panel{height:310px;order:2}.about .about-copy{order:1}.about h2{font-size:55px}.about .script{font-size:46px}.program-visual{min-height:280px;order:2}.program-card{padding:29px 23px;order:1}.program-card h3{font-size:36px}.timeline li{gap:10px;grid-template-columns:48px 15px 1fr;font-size:12px;min-height:45px}.timeline li:after{left:64px}.timeline time{font-size:13px}.dress-copy{padding:51px 29px}.dress-photo{min-height:300px}.cta{padding:90px 0 105px}.cta h2{font-size:55px}.cta .script{font-size:47px}.foot{justify-content:center;text-align:center}.foot p{order:3;width:100%}.float-rsvp{display:flex;position:fixed;bottom:14px;left:18px;right:18px;z-index:30;box-shadow:0 12px 40px #000b;font-size:13px}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.fadeup{opacity:1;transform:none;transition:none}.pill{transition:none}}
@@ -118,7 +118,7 @@
       <div class="navlinks" id="navlinks">
         <a href="#accueil">Accueil</a><a href="#histoire">L'invitation</a><a href="#dresscode">Dress code</a><a href="#rsvp">RSVP</a>
       </div>
-      <a class="pill outline" href="https://eu.forms.app/form/6adf9b1f6ce5d988c173f221" target="_blank" rel="noopener noreferrer">Je confirme ma présence ↗</a>
+      <span class="pill outline closed-state" role="status">Inscriptions closes ✓</span>
     </nav>
   </header>
   <main>
@@ -134,8 +134,8 @@
           <div class="ornament" aria-hidden="true">❖</div>
           <div class="theme">Racines → Émotion → Célébration</div>
           <p>Vous êtes chaleureusement conviés à célébrer les 50 ans de Simplice lors d'une soirée élégante, empreinte de souvenirs, d'émotion et de fête.</p>
-          <p style="color:#f3d89f;font-size:12px;letter-spacing:.03em;margin-top:-8px">Invitation individuelle · Vos enfants sont les bienvenus sur confirmation.</p>
-          <div class="hero-actions"><a class="pill gold-btn" href="https://eu.forms.app/form/6adf9b1f6ce5d988c173f221" target="_blank" rel="noopener noreferrer">Je confirme ma présence <span aria-hidden="true">↗</span></a><span class="hero-note">Une belle surprise se prépare… 🤫</span></div>
+          <p style="color:#f3d89f;font-size:12px;letter-spacing:.03em;margin-top:-8px">Invitation individuelle · Les inscriptions sont closes.</p>
+          <div class="hero-actions"><span class="pill gold-btn closed-state" role="status">Les inscriptions sont closes <span aria-hidden="true">✓</span></span><span class="hero-note">Une belle surprise se prépare… 🤫</span></div>
         </div>
         <aside class="hero-badge" aria-label="50 ans de Simplice">
           <span class="eyebrow">Vous êtes conviés</span>
@@ -188,21 +188,21 @@
     </section>
     <section class="cta" id="rsvp">
       <div class="wrap fadeup">
-        <div class="eyebrow">Une place vous attend</div>
-        <h2 class="serif">Confirmez votre <span class="gold">présence.</span></h2>
-        <p class="intro">Merci de confirmer votre réponse à cette invitation individuelle. Vous pouvez venir accompagné(e) de vos enfants : indiquez simplement leurs prénoms dans le formulaire.</p>
-        <a class="pill gold-btn" href="https://eu.forms.app/form/6adf9b1f6ce5d988c173f221" target="_blank" rel="noopener noreferrer">Je confirme ma présence <span aria-hidden="true">↗</span></a>
+        <div class="eyebrow">Réception privée · Samedi 5 décembre 2026</div>
+        <h2 class="serif">Les inscriptions sont <span class="gold">closes.</span></h2>
+        <p class="intro">Les confirmations de présence sont désormais terminées. Nous remercions chaleureusement les personnes invitées ayant répondu. L'accès à cette réception privée sera réservé aux personnes figurant sur la liste officielle des invités.</p>
+        <span class="pill gold-btn closed-state" role="status">Les inscriptions sont closes <span aria-hidden="true">✓</span></span>
         <span class="script">50 ans et un si beau chemin…</span>
-        <small>RSVP via forms.app · Merci de préserver la surprise jusqu'au jour J.</small>
+        <small>Les confirmations sont terminées · Merci de préserver la surprise jusqu'au jour J.</small>
       </div>
     </section>
   </main>
   <footer><div class="wrap foot">
     <a class="brand" href="#accueil"><span class="mark">✥</span> Simplice <span class="gold">50</span></a>
     <p>Famille ✦ Amitié ✦ Passion ✦ Rêves ✦ Héritage</p>
-    <a href="https://eu.forms.app/form/6adf9b1f6ce5d988c173f221" target="_blank" rel="noopener noreferrer">Répondre à l'invitation ↗</a>
+    <span class="closed-state">Inscriptions closes</span>
   </div></footer>
-  <a class="pill gold-btn float-rsvp" href="https://eu.forms.app/form/6adf9b1f6ce5d988c173f221" target="_blank" rel="noopener noreferrer">Confirmer ma présence ↗</a>
+  <span class="pill gold-btn float-rsvp closed-state" role="status">Inscriptions closes ✓</span>
   <script>
     const menu=document.getElementById("menu"), links=document.getElementById("navlinks");
     menu.addEventListener("click",()=>{const open=links.classList.toggle("open");menu.setAttribute("aria-expanded",String(open));menu.textContent=open?"✕":"☰";});
